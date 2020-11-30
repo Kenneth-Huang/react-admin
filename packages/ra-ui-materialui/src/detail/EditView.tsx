@@ -112,7 +112,10 @@ export const EditView = (props: EditViewProps) => {
 
 interface EditViewProps
     extends EditProps,
-        Omit<EditControllerProps, 'resource'> {
+        Omit<
+            EditControllerProps,
+            'resource' | 'onSuccess' | 'onFailure' | 'transform'
+        > {
     children: ReactElement;
 }
 

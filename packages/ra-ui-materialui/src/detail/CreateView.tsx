@@ -87,7 +87,10 @@ export const CreateView = (props: CreateViewProps) => {
 
 interface CreateViewProps
     extends CreateProps,
-        Omit<CreateControllerProps, 'resource'> {
+        Omit<
+            CreateControllerProps,
+            'resource' | 'onSuccess' | 'onFailure' | 'transform'
+        > {
     children: ReactElement;
 }
 
